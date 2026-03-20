@@ -2,6 +2,9 @@
 
 ProcessFolder(videosPath);
 
+Console.Write("Для выхода нажмите любую клавишу...");
+Console.ReadKey();
+
 void ProcessFolder(string path)
 {
     try
@@ -30,6 +33,6 @@ void CheckFile(string filePath)
     
     if (fileInfo.CreationTime.Date == DateTime.Today)
     {
-        Console.WriteLine($"{fileInfo.Name} [{fileInfo.CreationTime}]");
+        Console.WriteLine($"{fileInfo.FullName} [{fileInfo.CreationTime}]");
     }
 }
