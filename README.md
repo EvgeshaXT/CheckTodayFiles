@@ -4,11 +4,14 @@ It's just console app that finds files created today
 I created this repository purely for fun. I know that my work is worthless, as it is too easy to create lol. But let it be here as my own work.
 
 This program is written in C#, net10.0.
-U can see the code in Program.cs or I can duplicate here:
+U can see the code in Program.cs or I can duplicate here on English ver.:
 ```c#
 string videosPath = @"YOUR_PATH";
 
 ProcessFolder(videosPath);
+
+Console.Write("To exit, press any key...");
+Console.ReadKey();
 
 void ProcessFolder(string path)
 {
@@ -28,7 +31,7 @@ void ProcessFolder(string path)
     }
     catch (Exception ex)
     {
-        Console.WriteLine($"Ошибка какая-то: {ex.Message}");
+        Console.WriteLine($"Error: {ex.Message}");
     }
 }
 
@@ -38,7 +41,7 @@ void CheckFile(string filePath)
     
     if (fileInfo.CreationTime.Date == DateTime.Today)
     {
-        Console.WriteLine($"{fileInfo.Name} [{fileInfo.CreationTime}]");
+        Console.WriteLine($"{fileInfo.FullName} [{fileInfo.CreationTime}]");
     }
 }
 ```
