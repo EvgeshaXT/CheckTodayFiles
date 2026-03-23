@@ -45,5 +45,3 @@ void CheckFile(string filePath)
     }
 }
 ```
-
-And yeah, single Exception is written in Russian xd
